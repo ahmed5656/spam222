@@ -13,7 +13,9 @@ const prefix = "spam"
 
 
 
-
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
 
 
