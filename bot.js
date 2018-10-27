@@ -159,20 +159,23 @@ setInterval(function(){
 
 
 
-  client.on('message',async message => {
+ client.on('message',async message => {
     if(message.content.startsWith(prefix + "off")) {
-       if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':no_entry: | `Adminstrator`للاسف ليس لديك صلاحية يجي ان يكون لديك برمشن!');
-        message.channel.send('**Stopping.**').then(msg => {
+       if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':no_entry: | Adminstratorللاسف ليس لديك صلاحية يجي ان يكون لديك برمشن!');
+        message.channel.send('Stopping.').then(msg => {
             setTimeout(() => {
-               msg.edit('**Stoppping..**');
+               msg.edit('Stoppping..');
             },1000);
             setTimeout(() => {
-               msg.edit('**Done i will relunch early...**');
+               msg.edit('Done i will relunch early...');
             },2000);
         });
+        setTimeout(() => {
+            client.stop();
+client.login(process.env.BOT_TOKEN);
+        },3000);
     }
 });
-
 client.on('message', message => {
  if(message.content.startsWith(prefix + "come")) {
 message.member.voiceChannel.join();
