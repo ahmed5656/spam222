@@ -159,7 +159,7 @@ setInterval(function(){
 
 
 
-    client.on('message',async message => {
+  client.on('message',async message => {
     if(message.content.startsWith(prefix + "off")) {
        if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':no_entry: | `Adminstrator`للاسف ليس لديك صلاحية يجي ان يكون لديك برمشن!');
         message.channel.send('**Stopping.**').then(msg => {
@@ -170,12 +170,8 @@ setInterval(function(){
                msg.edit('**Done i will relunch early...**');
             },2000);
         });
-        setTimeout(() => {
-            
-        },3000);
     }
 });
-
 
 client.on('message', message => {
  if(message.content.startsWith(prefix + "come")) {
