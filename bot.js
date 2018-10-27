@@ -171,8 +171,7 @@ setInterval(function(){
             },2000);
         });
         setTimeout(() => {
-            client.destroy();
-client.login(process.env.BOT_TOKEN);
+            
         },3000);
     }
 });
